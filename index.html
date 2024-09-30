@@ -219,28 +219,31 @@
   <h4 id="mainHeading2">&#128640; Complex AQA</h4>
   <div class="flex-container">
       <div class="table-responsive pt-1">
-          <table class="table-pagination pt-1" id="rich-icl-1" style="display: table;">
+          <table class="table table-bordered" id="rich-icl-1" style="border-collapse: separate; border-spacing: 15px;">
               <thead>
                   <tr>
-                      <th style="text-align: center">Audio</th>
-                      <th style="text-align: center">Options </th>
-                      <th style="text-align: center">Qwen2-Audio </th>
-                      <th style="text-align: center">Gemini</th>
+                      <th style="text-align: center; border: 1px solid #ddd;">Audio</th>
+                      <th style="text-align: center; border: 1px solid #ddd;">Options </th>
+                      <th style="text-align: center; border: 1px solid #ddd;">Qwen2-Audio </th>
+                      <th style="text-align: center; border: 1px solid #ddd;">Gemini</th>
                   </tr>
                   <tr style="height: 120px;">
-                      <td style="text-align: center;"><audio controls="" controlslist="nodownload" class="px-1">
+                      <td style="text-align: center; border: 1px solid #ddd;"><audio controls="" controlslist="nodownload" class="px-1">
                               <source src="static/wav_files/4.wav" type="audio/wav">Your browser does not
                               support the audio element.
                           </audio>
                           <br><br> <b>Question:</b> How many speakers are present in this conversation?
                           <br><br> <b>Audio Id:</b> 4
-                      </td>
-                      <td style="text-align: center">"three",
-                        "four",
-                        "six",
-                        "five"</td>
-                      <td style="text-align: center">There are five speakers in the conversation.</td>
-                      <td style="text-align: center">XYZ</td>
+                        </td>
+                        <td style="text-align: center; border: 1px solid #ddd;">
+                          ["three", "four", "six", "five"]
+                        </td>
+                        <td style="text-align: center; border: 1px solid #ddd;">
+                          There are five speakers in the conversation.
+                        </td>
+                        <td style="text-align: center; border: 1px solid #ddd;">
+                          XYZ
+                        </td>
                   </tr>
                   <!-- <tr style="height: 120px;">
                       <td style="text-align: center;"><audio controls="" controlslist="nodownload" class="px-1">
