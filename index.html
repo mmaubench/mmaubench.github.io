@@ -215,99 +215,98 @@
       </div>
     </div>
 
-    <!-- Complex AQA Section -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h4 id="mainHeading2" style="font-weight: bolder; font-size: 24px;">&#128640; Complex AQA</h4>
-
-        <!-- Pop-out box effect for the table -->
-        <div class="flex-container shadow-lg p-3 mb-5 bg-white rounded" style="border: 2px solid #ddd;">
-          <div class="table-responsive pt-1">
-            <table class="table" id="rich-icl-1" style="border-collapse: collapse; width: 100%; border: none;">
-              <thead>
-                <tr>
-                  <th style="text-align: center; font-weight: bold; padding: 10px;">Audio</th>
-                  <th style="text-align: center; font-weight: bold; padding: 10px;">Options</th>
-                  <th style="text-align: center; font-weight: bold; padding: 10px;">Answer</th>
-                  <th style="text-align: center; font-weight: bold; padding: 10px;">Qwen2-Audio</th>
-                  <th style="text-align: center; font-weight: bold; padding: 10px;">Gemini</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="height: 120px;">
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    <audio controls controlslist="nodownload" class="px-1">
-                      <source src="static/wav_files/4.wav" type="audio/wav">
-                      Your browser does not support the audio element.
-                    </audio>
-                    <br><br> <b>Question:</b> How many speakers are present in this conversation?
-                    <br><br> <b>Audio Id:</b> 4
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    ["three", "four", "six", "five"]
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    three
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    five
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    XYZ
-                  </td>
-                </tr>
-                <tr style="height: 120px;">
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    <audio controls controlslist="nodownload" class="px-1">
-                      <source src="static/wav_files/00026.wav" type="audio/wav">
-                      Your browser does not support the audio element.
-                    </audio>
-                    <br><br> <b>Question:</b> From the given utterance, count the number of words that contain at least one stressed phoneme
-                    <br><br> <b>Audio Id:</b> 00026
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    ["four","nine","seventeen","one"]
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    nine
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    one
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    XYZ
-                  </td>
-                </tr>
-                <tr style="height: 120px;">
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    <audio controls controlslist="nodownload" class="px-1">
-                      <source src="static/wav_files/437791.2min.mp3" type="audio/wav">
-                      Your browser does not support the audio element.
-                    </audio>
-                    <br><br> <b>Question:</b> Which mood is primarily conveyed by the audio?
-                    <br><br> <b>Audio Id:</b> 437791.2min
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    [
-                        "Relaxed and calm",
-                        "Joyful and lighthearted",
-                        "Aggressive and intense",
-                        "Serious and urgent"
-                    ]
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    Serious and urgent
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    Relaxed and calm
-                  </td>
-                  <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                    XYZ
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="columns is-centered  bg-white rounded container-2">
+      <h4 id="mainHeading2" style="font-weight: bolder; font-size: 24px;">&#128640; Complex AQA</h4>
+    
+      <!-- Pop-out box effect for the table -->
+      <div class="flex-container shadow-lg p-3 mb-5 bg-white rounded" style="border: 2px solid #ddd;">
+        <div class="container" style="max-width: 100%; overflow-x: auto;"></div>
+        <div class="table-responsive pt-1">
+          <table class="table" id="rich-icl-1" style="border-collapse: collapse; width: 100%; border: none;">
+            <thead>
+              <tr>
+                <th style="text-align: center; font-weight: bold; padding: 10px;">Audio</th>
+                <th style="text-align: center; font-weight: bold; padding: 10px;">Options</th>
+                <th style="text-align: center; font-weight: bold; padding: 10px;">Answer</th>
+                <th style="text-align: center; font-weight: bold; padding: 10px;">Qwen2-Audio</th>
+                <th style="text-align: center; font-weight: bold; padding: 10px;">Gemini</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="height: 120px;">
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  <audio controls controlslist="nodownload" class="px-1">
+                    <source src="static/wav_files/4.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <br><br> <b>Question:</b> How many speakers are present in this conversation?
+                  <br><br> <b>Audio Id:</b> 4
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  ["three", "four", "six", "five"]
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  three
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  five
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  XYZ
+                </td>
+              </tr>
+              <tr style="height: 120px;">
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  <audio controls controlslist="nodownload" class="px-1">
+                    <source src="static/wav_files/00026.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <br><br> <b>Question:</b> From the given utterance, count the number of words that contain at least one stressed phoneme
+                  <br><br> <b>Audio Id:</b> 00026
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  ["four","nine","seventeen","one"]
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  nine
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  one
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  XYZ
+                </td>
+              </tr>
+              <tr style="height: 120px;">
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  <audio controls controlslist="nodownload" class="px-1">
+                    <source src="static/wav_files/437791.2min.mp3" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <br><br> <b>Question:</b> Which mood is primarily conveyed by the audio?
+                  <br><br> <b>Audio Id:</b> 437791.2min
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  [
+                      "Relaxed and calm",
+                      "Joyful and lighthearted",
+                      "Aggressive and intense",
+                      "Serious and urgent"
+                  ]
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  Serious and urgent
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  Relaxed and calm
+                </td>
+                <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                  XYZ
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -417,36 +416,36 @@
 
 
 <!-- Video carousel -->
-<!-- <section class="hero is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel1.mp4"
+            <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel2.mp4"
+            <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <-- Your video file here -->
-            <!-- <source src="static/videos/carousel3.mp4"
+            <!-- Your video file here -->
+            <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- End video carousel -->
 
 
