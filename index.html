@@ -215,36 +215,39 @@
       </div>
     </div>
 
-<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded container 2">
-  <h4 id="mainHeading2">&#128640; Complex AQA</h4>
-  <div class="flex-container">
+  <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded container 2" style="border: 2px solid #ddd;">
+    <h4 id="mainHeading2" style="font-weight: bold;">&#128640; Complex AQA</h4>
+    <div class="flex-container">
       <div class="table-responsive pt-1">
-        <table class="table" id="rich-icl-1" style="border-collapse: collapse; width: 100%;">
-              <thead>
-                  <tr>
-                      <th style="text-align: center; font-weight: 500; border-bottom: 2px solid #ddd; padding: 10px;">Audio</th>
-                      <th style="text-align: center; font-weight: 500; border-bottom: 2px solid #ddd; padding: 10px;">Options </th>
-                      <th style="text-align: center; font-weight: 500; border-bottom: 2px solid #ddd; padding: 10px;">Qwen2-Audio </th>
-                      <th style="text-align: center; font-weight: 500; border-bottom: 2px solid #ddd; padding: 10px;;">Gemini</th>
-                  </tr>
-                  <tr style="height: 120px;">
-                        <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                          <audio controls controlslist="nodownload" class="px-1"></audio>
-                              <source src="static/wav_files/4.wav" type="audio/wav">
-                          </audio>
-                          <br><br> <b>Question:</b> How many speakers are present in this conversation?
-                          <br><br> <b>Audio Id:</b> 4
-                        </td>
-                        <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                          ["three", "four", "six", "five"]
-                        </td>
-                        <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                          There are five speakers in the conversation.
-                        </td>
-                        <td style="text-align: center; vertical-align: middle; padding: 15px;">
-                          XYZ
-                        </td>
-                  </tr>
+        <table class="table" id="rich-icl-1" style="border-collapse: collapse; width: 100%; border: 2px solid #333;">
+          <thead>
+            <tr>
+              <th style="text-align: center; font-weight: bold; border-bottom: 2px solid #333; padding: 10px;">Audio</th>
+              <th style="text-align: center; font-weight: bold; border-bottom: 2px solid #333; padding: 10px;">Options</th>
+              <th style="text-align: center; font-weight: bold; border-bottom: 2px solid #333; padding: 10px;">Qwen2-Audio</th>
+              <th style="text-align: center; font-weight: bold; border-bottom: 2px solid #333; padding: 10px;">Gemini</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="height: 120px;">
+              <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                <audio controls controlslist="nodownload" class="px-1">
+                  <source src="static/wav_files/4.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+                </audio>
+                <br><br> <b>Question:</b> How many speakers are present in this conversation?
+                <br><br> <b>Audio Id:</b> 4
+              </td>
+              <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                ["three", "four", "six", "five"]
+              </td>
+              <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                There are five speakers in the conversation.
+              </td>
+              <td style="text-align: center; vertical-align: middle; padding: 15px;">
+                XYZ
+              </td>
+            </tr>
                   <!-- <tr style="height: 120px;">
                       <td style="text-align: center;"><audio controls="" controlslist="nodownload" class="px-1">
                               <source src="static/complex_aqa/Y4nw3UiN65Y8.wav" type="audio/wav">Your browser does not
@@ -298,8 +301,8 @@
                           complex and intricate, it suggests that the dancer is highly skilled. On the other hand, if the sounds are simple
                           and repetitive, it suggests that the dancer may not be as skilled.</td>
                   </tr> -->
-              </thead>
-              <tbody></tbody>
+              <!-- </thead> -->
+              <!-- <tbody></tbody> -->
           </table>
       </div>
   </div>
