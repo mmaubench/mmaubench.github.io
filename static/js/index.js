@@ -20,16 +20,16 @@ function generateTable(leaderboardData) {
     });
 
     // Function to get the highest and second highest values
-    // function getTopTwoValues(values) {
-    //     // Exclude the first three rows and work with the rest
-    //     let filteredValues = values.slice(3);  // Skip the first three elements
-    //     let sorted = [...filteredValues].filter(v => !isNaN(v)).sort((a, b) => b - a);
-    //     return [sorted[0], sorted[1]];  // Highest and second-highest
-    // }
     function getTopTwoValues(values) {
-        let sorted = [...values].filter(v => !isNaN(v)).sort((a, b) => b - a);
+        // Exclude the first three rows and work with the rest
+        let filteredValues = values.slice(3);  // Skip the first three elements
+        let sorted = [...filteredValues].filter(v => !isNaN(v)).sort((a, b) => b - a);
         return [sorted[0], sorted[1]];  // Highest and second-highest
     }
+    // function getTopTwoValues(values) {
+    //     let sorted = [...values].filter(v => !isNaN(v)).sort((a, b) => b - a);
+    //     return [sorted[0], sorted[1]];  // Highest and second-highest
+    // }
 
     // Get top two values for each column
     const [soundMiniTop, soundMiniSecond] = getTopTwoValues(soundMiniValues);
