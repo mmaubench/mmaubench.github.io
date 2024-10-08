@@ -167,6 +167,213 @@
       },
       {
         "info": {
+          "name": "MusiLingo",
+          "size": "7B",
+          "type": "unknown"
+        },
+        "Sound": {
+          "Test-mini": "23.12",
+          "Test": "27.76"
+        },
+        "Music": {
+          "Test-mini": "03.96",
+          "Test": "06.00"
+        },
+        "Speech": {
+          "Test-mini": "05.88",
+          "Test": "06.42"
+        },
+        "Avg": {
+          "Test-mini": "10.98",
+          "Test": "13.39"
+        }
+      },
+      {
+        "info": {
+          "name": "MuLLaMa",
+          "size": "7B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "40.84",
+          "Test": "44.80"
+        },
+        "Music": {
+          "Test-mini": "32.63",
+          "Test": "30.63"
+        },
+        "Speech": {
+          "Test-mini": "22.22",
+          "Test": "16.56"
+        },
+        "Avg": {
+          "Test-mini": "31.90",
+          "Test": "30.66"
+        }
+      },
+      {
+        "info": {
+          "name": "M2UGen",
+          "size": "7B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "03.60",
+          "Test": "03.69"
+        },
+        "Music": {
+          "Test-mini": "32.93",
+          "Test": "30.40"
+        },
+        "Speech": {
+          "Test-mini": "06.36",
+          "Test": "04.53"
+        },
+        "Avg": {
+          "Test-mini": "14.28",
+          "Test": "12.87"
+        }
+      },
+      {
+        "info": {
+          "name": "GAMA",
+          "size": "7B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "41.44",
+          "Test": "45.40"
+        },
+        "Music": {
+          "Test-mini": "32.33",
+          "Test": "30.83"
+        },
+        "Speech": {
+          "Test-mini": "18.91",
+          "Test": "19.21"
+        },
+        "Avg": {
+          "Test-mini": "30.90",
+          "Test": "31.81"
+        }
+      },
+      {
+        "info": {
+          "name": "GAMA-IT",
+          "size": "7B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "43.24",
+          "Test": "43.23"
+        },
+        "Music": {
+          "Test-mini": "28.44",
+          "Test": "28.00"
+        },
+        "Speech": {
+          "Test-mini": "18.91",
+          "Test": "15.84"
+        },
+        "Avg": {
+          "Test-mini": "30.20",
+          "Test": "29.02"
+        }
+      },
+      {
+        "info": {
+          "name": "Qwen-Audio-Chat",
+          "size": "8.4B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "55.25",
+          "Test": "56.73"
+        },
+        "Music": {
+          "Test-mini": "44.00",
+          "Test": "40.90"
+        },
+        "Speech": {
+          "Test-mini": "30.03",
+          "Test": "27.95"
+        },
+        "Avg": {
+          "Test-mini": "43.10",
+          "Test": "41.86"
+        }
+      },
+      {
+        "info": {
+          "name": "Qwen2-Audio",
+          "size": "8.4B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "07.50",
+          "Test": "08.20"
+        },
+        "Music": {
+          "Test-mini": "05.14",
+          "Test": "06.16"
+        },
+        "Speech": {
+          "Test-mini": "03.10",
+          "Test": "04.24"
+        },
+        "Avg": {
+          "Test-mini": "05.24",
+          "Test": "06.20"
+        }
+      },
+      {
+        "info": {
+          "name": "Qwen2-Audio-Instruct",
+          "size": "8.4B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "54.95",
+          "Test": "45.90"
+        },
+        "Music": {
+          "Test-mini": "50.98",
+          "Test": "53.26"
+        },
+        "Speech": {
+          "Test-mini": "42.04",
+          "Test": "45.90"
+        },
+        "Avg": {
+          "Test-mini": "49.20",
+          "Test": "52.50"
+        }
+      },
+      {
+        "info": {
+          "name": "SALAMONN",
+          "size": "13B",
+          "type": "LLM"
+        },
+        "Sound": {
+          "Test-mini": "41.00",
+          "Test": "40.30"
+        },
+        "Music": {
+          "Test-mini": "34.80",
+          "Test": "33.76"
+        },
+        "Speech": {
+          "Test-mini": "25.50",
+          "Test": "24.24"
+        },
+        "Avg": {
+          "Test-mini": "33.70",
+          "Test": "32.77"
+        }
+      },
+      {
+        "info": {
           "name": "Gemini Pro v1.5",
           "size": "-",
           "type": "LALM",
