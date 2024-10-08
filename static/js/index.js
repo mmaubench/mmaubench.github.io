@@ -9,19 +9,19 @@ function generateTable(leaderboardData) {
     let avgMiniValues = [], avgTestValues = [];
 
     leaderboardData.leaderboardData.forEach(entry => {
-        soundMiniValues.push(entry.Sound["Test-mini"]);
-        soundTestValues.push(entry.Sound["Test"]);
-        musicMiniValues.push(entry.Music["Test-mini"]);
-        musicTestValues.push(entry.Music["Test"]);
-        speechMiniValues.push(entry.Speech["Test-mini"]);
-        speechTestValues.push(entry.Speech["Test"]);
-        avgMiniValues.push(entry.Avg["Test-mini"]);
-        avgTestValues.push(entry.Avg["Test"]);
+        soundMiniValues.push(parseFloat(entry.Sound["Test-mini"]));  // Parse as float for accurate comparison
+        soundTestValues.push(parseFloat(entry.Sound["Test"]));
+        musicMiniValues.push(parseFloat(entry.Music["Test-mini"]));
+        musicTestValues.push(parseFloat(entry.Music["Test"]));
+        speechMiniValues.push(parseFloat(entry.Speech["Test-mini"]));
+        speechTestValues.push(parseFloat(entry.Speech["Test"]));
+        avgMiniValues.push(parseFloat(entry.Avg["Test-mini"]));
+        avgTestValues.push(parseFloat(entry.Avg["Test"]));
     });
 
     // Function to get the highest and second highest values
     function getTopTwoValues(values) {
-        let sorted = [...values].sort((a, b) => b - a);
+        let sorted = [...values].filter(v => !isNaN(v)).sort((a, b) => b - a);
         return [sorted[0], sorted[1]];  // Highest and second-highest
     }
 
@@ -52,14 +52,14 @@ function generateTable(leaderboardData) {
         }
 
         // Sound, Music, Speech, Avg (Test-mini and Test)
-        let soundMini = `<td>${formatValue(entry.Sound["Test-mini"], soundMiniTop, soundMiniSecond)}</td>`;
-        let soundTest = `<td>${formatValue(entry.Sound["Test"], soundTestTop, soundTestSecond)}</td>`;
-        let musicMini = `<td>${formatValue(entry.Music["Test-mini"], musicMiniTop, musicMiniSecond)}</td>`;
-        let musicTest = `<td>${formatValue(entry.Music["Test"], musicTestTop, musicTestSecond)}</td>`;
-        let speechMini = `<td>${formatValue(entry.Speech["Test-mini"], speechMiniTop, speechMiniSecond)}</td>`;
-        let speechTest = `<td>${formatValue(entry.Speech["Test"], speechTestTop, speechTestSecond)}</td>`;
-        let avgMini = `<td>${formatValue(entry.Avg["Test-mini"], avgMiniTop, avgMiniSecond)}</td>`;
-        let avgTest = `<td>${formatValue(entry.Avg["Test"], avgTestTop, avgTestSecond)}</td>`;
+        let soundMini = `<td>${formatValue(parseFloat(entry.Sound["Test-mini"]), soundMiniTop, soundMiniSecond)}</td>`;
+        let soundTest = `<td>${formatValue(parseFloat(entry.Sound["Test"]), soundTestTop, soundTestSecond)}</td>`;
+        let musicMini = `<td>${formatValue(parseFloat(entry.Music["Test-mini"]), musicMiniTop, musicMiniSecond)}</td>`;
+        let musicTest = `<td>${formatValue(parseFloat(entry.Music["Test"]), musicTestTop, musicTestSecond)}</td>`;
+        let speechMini = `<td>${formatValue(parseFloat(entry.Speech["Test-mini"]), speechMiniTop, speechMiniSecond)}</td>`;
+        let speechTest = `<td>${formatValue(parseFloat(entry.Speech["Test"]), speechTestTop, speechTestSecond)}</td>`;
+        let avgMini = `<td>${formatValue(parseFloat(entry.Avg["Test-mini"]), avgMiniTop, avgMiniSecond)}</td>`;
+        let avgTest = `<td>${formatValue(parseFloat(entry.Avg["Test"]), avgTestTop, avgTestSecond)}</td>`;
 
         // Append all cells into the row
         row.innerHTML = `${nameCell}${sizeCell}${soundMini}${soundTest}${musicMini}${musicTest}${speechMini}${speechTest}${avgMini}${avgTest}`;
@@ -78,6 +78,7 @@ function loadJSONAndGenerateTable() {
 
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', loadJSONAndGenerateTable);
+
 
 
 
