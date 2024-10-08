@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 			  const SoundOverall = formatOverallValue(applyStyle(safeGet(row, 'Sound.overall'), SoundScores.overall[index]), safeGet(row, 'Sound.source'));
 			  const valOverall = formatOverallValue(applyStyle(safeGet(row, 'Music.overall'), valScores.overall[index]), safeGet(row, 'Music.source'));
-			  const testOverall = formatOverallValue(applyStyle(safeGet(row, 'test.overall'), testScores.overall[index]), safeGet(row, 'test.source'));
+			  const testOverall = formatOverallValue(applyStyle(safeGet(row, 'Speech.overall'), testScores.overall[index]), safeGet(row, 'Speech.source'));
   
 			  tr.innerHTML = `
 				<td>${nameCell}</td>
@@ -104,10 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	  toggleDetails('Sound');
 	});
 	document.querySelector('.Music-details-cell').addEventListener('click', function() {
-	  toggleDetails('val');
+	  toggleDetails('Music');
 	});
 	document.querySelector('.Speech-details-cell').addEventListener('click', function() {
-	  toggleDetails('test');
+	  toggleDetails('Speech');
 	});
   
 	var headers = document.querySelectorAll('#mmmu-table thead tr:last-child th.sortable');

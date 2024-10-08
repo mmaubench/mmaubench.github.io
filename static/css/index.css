@@ -133,5 +133,15 @@ body {
   font-size: smaller;
 }
 
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
 
+.leaderboard-label {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
 
