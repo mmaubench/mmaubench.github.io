@@ -1,35 +1,69 @@
 // Function to generate table rows
 function generateTable(leaderboardData) {
     const tbody = document.querySelector('#leaderboard tbody');
-    const excludedEntries = ["Random Guess", "Most Frequent Choice", "Human (test-mini)"];
     
-    // Filter out excluded entries before generating rows
-    leaderboardData.leaderboardData
-        .filter(entry => !excludedEntries.includes(entry.info.name)) // Exclude specific entries
-        .forEach(entry => {
-            const row = document.createElement('tr');
-            
-            // Name with optional link
-            let nameCell = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.info.link ? `<a href="${entry.info.link}">${entry.info.name}</a>` : entry.info.name}</td>`;
-            
-            // Size
-            let sizeCell = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.info.size}</td>`;
-            
-            // Sound, Music, Speech, Avg (Test-mini and Test)
-            let soundMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Sound["Test-mini"] || '-'}</td>`;
-            let soundTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Sound["Test"] || '-'}</td>`;
-            let musicMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Music["Test-mini"] || '-'}</td>`;
-            let musicTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Music["Test"] || '-'}</td>`;
-            let speechMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Speech["Test-mini"] || '-'}</td>`;
-            let speechTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Speech["Test"] || '-'}</td>`;
-            let avgMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Avg["Test-mini"] || '-'}</td>`;
-            let avgTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Avg["Test"] || '-'}</td>`;
+    // Clear existing rows
+    tbody.innerHTML = '';
 
-            // Append all cells into the row
-            row.innerHTML = `${nameCell}${sizeCell}${soundMini}${soundTest}${musicMini}${musicTest}${speechMini}${speechTest}${avgMini}${avgTest}`;
-            
-            tbody.appendChild(row);
-        });
+    // Store scores for comparison
+    let scores = [];
+
+    // Populate the table and collect scores excluding certain entries
+    leaderboardData.leaderboardData.forEach(entry => {
+        const row = document.createElement('tr');
+        
+        // Name with optional link
+        let nameCell = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.info.link ? `<a href="${entry.info.link}">${entry.info.name}</a>` : entry.info.name}</td>`;
+        
+        // Size
+        let sizeCell = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.info.size}</td>`;
+        
+        // Sound, Music, Speech, Avg (Test-mini and Test)
+        let soundMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Sound["Test-mini"] || '-'}</td>`;
+        let soundTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Sound["Test"] || '-'}</td>`;
+        let musicMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Music["Test-mini"] || '-'}</td>`;
+        let musicTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Music["Test"] || '-'}</td>`;
+        let speechMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Speech["Test-mini"] || '-'}</td>`;
+        let speechTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Speech["Test"] || '-'}</td>`;
+        let avgMini = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Avg["Test-mini"] || '-'}</td>`;
+        let avgTest = `<td style="text-align: center; vertical-align: middle; padding: 10px;">${entry.Avg["Test"] || '-'}</td>`;
+
+        // Append all cells into the row
+        row.innerHTML = `${nameCell}${sizeCell}${soundMini}${soundTest}${musicMini}${musicTest}${speechMini}${speechTest}${avgMini}${avgTest}`;
+        
+        // Append row to tbody
+        tbody.appendChild(row);
+        
+        // Collect scores for comparison, excluding specific entries
+        if (!["Random Guess", "Most Frequent Choice", "Human (test-mini)"].includes(entry.info.name)) {
+            // Assuming the scores are in `Sound.Test`, `Music.Test`, etc.
+            scores.push({
+                name: entry.info.name,
+                soundTest: entry.Sound["Test"] || 0,
+                musicTest: entry.Music["Test"] || 0,
+                speechTest: entry.Speech["Test"] || 0,
+                avgTest: entry.Avg["Test"] || 0,
+            });
+        }
+    });
+
+    // Compare the values and determine the largest and second largest scores
+    compareScores(scores);
+}
+
+// Function to compare scores and find the largest and second largest
+function compareScores(scores) {
+    if (scores.length === 0) return; // No scores to compare
+
+    // Sort scores based on the primary criterion (e.g., avgTest) and find the top scores
+    scores.sort((a, b) => b.avgTest - a.avgTest);
+    
+    const largest = scores[0];
+    const secondLargest = scores[1];
+
+    // You can now highlight these in your table or display the results elsewhere
+    console.log('Largest:', largest);
+    console.log('Second Largest:', secondLargest);
 }
 
 // Function to load JSON and then generate the table
