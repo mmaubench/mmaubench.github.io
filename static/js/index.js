@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			  tr.innerHTML = `
 				<td>${nameCell}</td>
 				<td>${row.info.size}</td>
-				<td>${row.info.date}</td>
 				<td class="Sound-overall">${SoundOverall}</td>
 				<td class="hidden Sound-details">${applyStyle(safeGet(row, 'Sound.Test-mini'), SoundScores.Test-mini[index])}</td>
 				<td class="hidden Sound-details">${applyStyle(safeGet(row, 'Sound.Test'), SoundScores.Test[index])}</td>
