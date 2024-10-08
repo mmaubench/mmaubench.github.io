@@ -61,9 +61,29 @@ function compareScores(scores) {
     const largest = scores[0];
     const secondLargest = scores[1];
 
-    // You can now highlight these in your table or display the results elsewhere
-    console.log('Largest:', largest);
-    console.log('Second Largest:', secondLargest);
+    // Highlight the largest and second largest scores in the table
+    highlightScores(largest, secondLargest);
+}
+
+// Function to highlight the largest and second largest scores in the table
+function highlightScores(largest, secondLargest) {
+    const tbody = document.querySelector('#leaderboard tbody');
+
+    for (let row of tbody.rows) {
+        const cells = row.cells;
+
+        // Check if the current row matches the largest score
+        if (cells.length > 0 && cells[0].textContent === largest.name) {
+            // Apply bold style to the average test score cell
+            cells[cells.length - 1].innerHTML = `<b>${largest.avgTest}</b>`; // Replace last cell with bold value
+        }
+
+        // Check if the current row matches the second largest score
+        if (cells.length > 0 && cells[0].textContent === secondLargest.name) {
+            // Apply underline style to the average test score cell
+            cells[cells.length - 1].innerHTML = `<u>${secondLargest.avgTest}</u>`; // Replace last cell with underlined value
+        }
+    }
 }
 
 // Function to load JSON and then generate the table
@@ -76,6 +96,7 @@ function loadJSONAndGenerateTable() {
 
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', loadJSONAndGenerateTable);
+
 
 
 
