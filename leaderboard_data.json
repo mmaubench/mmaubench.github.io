@@ -143,6 +143,30 @@
       },
       {
         "info": {
+          "name": "LTU AS",
+          "size": "7B",
+          "type": "LALM",
+          "link": "https://huggingface.co/LTU"  
+        },
+        "Sound": {
+          "Test-mini": "23.35",
+          "Test": "24.96"
+        },
+        "Music": {
+          "Test-mini": "9.10",
+          "Test": "10.46"
+        },
+        "Speech": {
+          "Test-mini": "20.60",
+          "Test": "21.30"
+        },
+        "Avg": {
+          "Test-mini": "17.68",
+          "Test": "18.90"
+        }
+      },
+      {
+        "info": {
           "name": "Gemini Pro v1.5",
           "size": "-",
           "type": "LALM",
