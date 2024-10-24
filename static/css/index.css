@@ -139,9 +139,38 @@ body {
   overflow-x: auto;
 }
 
+/* .human_expert {
+  background-color: rgba(180, 161, 108, 0.867) !important;
+}
+
+.open_source {
+  background-color: rgb(234, 219, 232) !important;
+}
+
+.proprietary {
+  background-color: rgba(161, 220, 224, 0.1) !important;
+} */
+
+.human_expert {
+  background-color: rgba(218, 191, 135, 0.3) !important; /* Light beige/golden */
+}
+
+.open_source {
+  background-color: rgb(240, 229, 245) !important; /* Soft lavender */
+}
+
+.proprietary {
+  background-color: rgba(187, 235, 240, 0.3) !important; /* Light teal */
+}
+
 .leaderboard-label {
   padding: 5px 10px;
   margin-right: 10px;
   border-radius: 5px;
 }
 
+.model-labels-container {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
